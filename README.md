@@ -2,7 +2,7 @@
 
 All credits and big thanks to https://github.com/timfish/forge-externals-plugin
 
-## @kurdin/forge-externals-plugin
+## forge-externals-plugin-ts
 
 When using Electron with Webpack, the easiest way to support native
 modules is to add them to Webpack `externals` configuration. This tells webpack
@@ -36,7 +36,7 @@ here is an example of `forge.config.ts`
 
 ```js
 ...
-const { ForgeExternalsPlugin } = require('@kurdin/forge-externals-plugin')
+const { ForgeExternalsPlugin } = require('forge-externals-plugin-ts')
 ...
 
 const config: ForgeConfig = {

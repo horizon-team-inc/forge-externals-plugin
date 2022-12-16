@@ -1,5 +1,5 @@
 {
-  "name": "@kurdin/forge-externals-plugin",
+  "name": "forge-externals-plugin-ts",
   "version": "0.2.0",
   "description": "",
   "main": "index.js",
