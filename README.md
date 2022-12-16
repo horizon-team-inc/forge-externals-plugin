@@ -32,7 +32,7 @@ This plugin should be added after `WebpackPlugin` and it
 ensures that your external modules and their dependencies are included in the
 packaged app.
 
-here is example of `forge.config.ts`
+here is an example of `forge.config.ts`
 
 ```js
 ...
