@@ -1,6 +1,6 @@
 {
   "name": "forge-externals-plugin-ts",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/timfish/forge-externals-plugin.git"
+    "url": "git+https://github.com/kurdin/forge-externals-plugin.git"
   },
-  "author": "Tim Fish <tim@timfish.uk>",
+  "author": "Sergey Kurdin",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/timfish/forge-externals-plugin/issues"
+    "url": "https://github.com/kurdin/forge-externals-plugin/issues"
   },
-  "homepage": "https://github.com/timfish/forge-externals-plugin#readme",
+  "homepage": "https://github.com/kurdin/forge-externals-plugin#readme",
   "dependencies": {
     "flora-colossus": "1.0.1"
   }
