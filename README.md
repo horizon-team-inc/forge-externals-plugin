@@ -26,40 +26,45 @@ This works in development but with Electron Forge + Webpack,
 `node_modules` gets excluded during packaging so the modules are missing in the
 packaged app.
 
-This plugin should be added after `@electron-forge/plugin-webpack` and it
+This plugin should be added after `WebpackPlugin` and it
 ensures that your external modules and their dependencies are included in the
 packaged app.
 
-```json
- "config": {
-    "forge": {
-      "packagerConfig": {},
-      "makers": [],
-      "plugins": [
-        [
-          "@electron-forge/plugin-webpack",
-          {
-            "mainConfig": "./webpack.main.config.js",
-            "renderer": {
-              "config": "./webpack.renderer.config.js",
-              "entryPoints": [
-                {
-                  "html": "./src/index.html",
-                  "js": "./src/renderer.ts",
-                  "name": "main_window"
-                }
-              ]
-            }
-          }
-        ],
-        [
-          "@timfish/forge-externals-plugin",
-          {
-            "externals": ["native-hello-world"],
-            "includeDeps": true
-          }
-        ]
-      ]
-    }
+here is example of `forge.config.ts`
+
+```js
+...
+const { ForgeExternalsPlugin } = require('@kurdin/forge-externals-plugin')
+...
+
+const config: ForgeConfig = {
+  packagerConfig: {
+    icon: 'src/assets/app-icons/icon'
   },
+  rebuildConfig: {},
+  publishers: [
+    {
+      name: '@electron-forge/publisher-github',
+      config: {
+        repository: {
+          owner: 'kurdin',
+          name: 'your-app-name'
+        },
+        prerelease: true,
+        draft: true,
+        authToken: process.env.GITHUB_TOKEN
+      }
+    }
+  ],
+  ...
+  plugins: [
+    new WebpackPlugin({...}),
+    new ForgeExternalsPlugin({
+      externals: ['native-hello-world'],
+      includeDeps: true
+    })
+  ]
+}
+
+export default config
 ```
