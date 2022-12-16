@@ -1,4 +1,6 @@
-# @timfish/forge-externals-plugin
+# This is forge-externals-plugin in Typescript for electron-forge 6.x original plugin has outdated APIs for this is a fixed version. 
+
+## kurdin/forge-externals-plugin
 
 When using Electron with Webpack, the easiest way to support native
 modules is to add them to Webpack `externals` configuration. This tells webpack
