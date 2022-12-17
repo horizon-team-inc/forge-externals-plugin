@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/kurdin/forge-externals-plugin#readme",
   "dependencies": {
+    "@electron-forge/plugin-base": "^6.0.4",
+    "@electron-forge/shared-types": "^6.0.4",
     "flora-colossus": "1.0.1"
   }
 }
