@@ -14,7 +14,7 @@ const defaultOpts = {
 class ForgeExternalsPlugin extends PluginBase<unknown> {
   private _includeDeps: boolean;
   private _externals: string[];
-  private _dir: string = __dirname;
+  private _dir!: string;
   name = "forge-externals-plugin";
 
   constructor(opts: Record<string, unknown>) {
