@@ -2,23 +2,31 @@
   "name": "forge-externals-plugin-ts",
   "version": "0.2.3",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "cd test-app && npm i && npm run start && npm run package"
+    "build": "tsc -p tsconfig.json",
+    "prepare": "npm run build",
+    "test": "cd tests && npm i && npm run start && npm run package"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kurdin/forge-externals-plugin.git"
+    "url": "git+https://github.com/horizon-team-inc/forge-externals-plugin.git"
   },
-  "author": "Sergey Kurdin",
+  "author": "Horizon Team",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kurdin/forge-externals-plugin/issues"
+    "url": "https://github.com/horizon-team-inc/forge-externals-plugin/issues"
   },
-  "homepage": "https://github.com/kurdin/forge-externals-plugin#readme",
+  "homepage": "https://github.com/horizon-team-inc/forge-externals-plugin#readme",
   "dependencies": {
     "@electron-forge/plugin-base": "^6.0.4",
     "@electron-forge/shared-types": "^6.0.4",
+    "enquirer": "^2.4.1",
     "flora-colossus": "1.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.1",
+    "typescript": "^5.8.3"
   }
 }
